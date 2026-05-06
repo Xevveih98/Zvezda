@@ -8,5 +8,5 @@ PurchasesPage::PurchasesPage(QWidget *parent)
 {
     auto *layout = new QVBoxLayout(this);
 
-    layout->addWidget(new QLabel("Purchases page"));
+    layout->addWidget(new QLabel("Покупки"));
 }

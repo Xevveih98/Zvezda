@@ -7,6 +7,8 @@
 
 #include "productspage.h"
 #include "purchasespage.h"
+#include "balancepage.h"
+#include "recipespage.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,14 +17,18 @@ MainWindow::MainWindow(QWidget *parent)
     auto *layout = new QHBoxLayout(central);
 
     menu = new QListWidget(this);
-    menu->addItem("Products");
-    menu->addItem("Purchases");
+    menu->addItem("Товары");
+    menu->addItem("Покупки");
+    menu->addItem("Баланс");
+    menu->addItem("Рецепты");
     menu->setFixedWidth(150);
 
     pages = new QStackedWidget(this);
 
     pages->addWidget(new ProductsPage(this));
     pages->addWidget(new PurchasesPage(this));
+    pages->addWidget(new BalancePage(this));
+    pages->addWidget(new RecipesPage(this));
 
     layout->addWidget(menu);
     layout->addWidget(pages);

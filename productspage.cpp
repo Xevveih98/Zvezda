@@ -12,7 +12,7 @@ ProductsPage::ProductsPage(QWidget *parent)
     table = new QTableView(this);
 
     model = new QSqlTableModel(this);
-    model->setTable("products");
+    model->setTable("Товары");
     model->select();
 
     table->setModel(model);

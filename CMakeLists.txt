@@ -13,6 +13,8 @@ qt_add_executable(Zvezda
     database_manager.h database_manager.cpp
     productspage.h productspage.cpp
     purchasespage.h purchasespage.cpp
+    recipespage.h recipespage.cpp
+    balancepage.h balancepage.cpp
 )
 
 target_link_libraries(Zvezda
