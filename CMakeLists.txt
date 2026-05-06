@@ -11,6 +11,8 @@ qt_add_executable(Zvezda
     mainwindow.cpp
     mainwindow.h
     database_manager.h database_manager.cpp
+    productspage.h productspage.cpp
+    purchasespage.h purchasespage.cpp
 )
 
 target_link_libraries(Zvezda

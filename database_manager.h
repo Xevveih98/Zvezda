@@ -1,10 +1,27 @@
 #ifndef DATABASE_MANAGER_H
 #define DATABASE_MANAGER_H
 
-class database_manager
+#include <QtSql/QSqlDatabase>
+
+class DatabaseManager
 {
 public:
-    database_manager();
+    static DatabaseManager& instance();
+
+    bool openDatabase(const QString& path);
+    void closeDatabase();
+    bool isOpen() const;
+
+    QSqlDatabase database() const;
+
+private:
+    DatabaseManager();
+    ~DatabaseManager();
+
+    DatabaseManager(const DatabaseManager&) = delete;
+    DatabaseManager& operator=(const DatabaseManager&) = delete;
+
+    QSqlDatabase db;
 };
 
 #endif // DATABASE_MANAGER_H
